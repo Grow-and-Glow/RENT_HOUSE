@@ -1,0 +1,103 @@
+{% extends "base.html" %} 
+
+{% load static %} 
+
+{% block title %}
+  Accueil | RENT HOUSE 
+{% endblock %} 
+
+{% block content %}
+
+<section class="relative min-h-screen flex items-center">
+  
+  <div class="absolute inset-0">
+    <img src="{% static 'src/photos/photo-1600585154340-be6161a56a0c.jpg' %}" alt="Maison moderne" class="w-full h-full object-cover" />
+
+    <!-- Overlay sombre -->
+    <div class="absolute inset-0 bg-black/50"></div>
+  </div>
+
+ 
+  <div class="relative z-10 max-w-7xl mx-auto px-6 w-full">
+    <div class="max-w-2xl text-white">
+      <p class="text-sm uppercase tracking-[0.3em] mb-5"> Bienvenue chez RENT HOUSE </p>
+      <h1 class="text-4xl md:text-6xl font-bold leading-tight mb-6">
+        Trouvez le bien <span class="font-light">qui vous correspond.</span>
+      </h1>
+      <p class="text-lg text-gray-200 leading-relaxed mb-8">
+        Découvrez des maisons, appartements et villas proposés par des agences immobilières de confiance.
+      </p>
+
+      <div class="flex flex-wrap gap-4">
+        <a href="#" class="bg-white text-black px-7 py-3 font-medium hover:bg-gray-200 transition">
+          Découvrir les biens
+        </a>
+
+        <a href="#" class="border border-white text-white px-7 py-3 font-medium hover:bg-white hover:text-black transition">
+          Nous contacter
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section id="recherche" class="relative z-20 -mt-20 pb-16 px-6">
+  <div class="max-w-7xl mx-auto bg-white rounded-md shadow-2xl p-6 md:p-8">
+    
+    <div class="mb-6">
+      <h2 class="text-2xl font-bold text-gray-900"> Trouvez votre prochain logement </h2>
+      <p class="text-gray-500 text-sm mt-2"> Quelques critères suffisent pour trouver le bien idéal. </p>
+    </div>
+
+    
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-5">
+      
+      <div>
+        <label class="block text-sm font-semibold text-gray-700 mb-2"> Transaction </label>
+        <select class="w-full border border-gray-200 rounded-lg px-4 py-3 ">
+          <option value="location">Louer</option>
+          <option value="vente">Acheter</option>
+        </select>
+      </div>
+
+      
+      <div>
+        <label class="block text-sm font-semibold text-gray-700 mb-2"> Localisation </label>
+        <input type="text" placeholder="Ex : Bujumbura" class="w-full border border-gray-200 rounded-lg px-4 py-3  " />
+      </div>
+
+      
+      <div>
+        <label class="block text-sm font-semibold text-gray-700 mb-2"> Type de bien </label>
+        <select class="w-full border border-gray-200 rounded-lg px-4 py-3" >
+          <option value="">Tous les biens</option>
+          <option value="maison">Maison</option>
+          <option value="appartement">Appartement</option>
+          <option value="villa">Villa</option>
+        </select>
+      </div>
+
+     
+      <div>
+        <label class="block text-sm font-semibold text-gray-700 mb-2"> Prix minimum </label>
+        <input type="number" placeholder="Minimum" class="w-full border border-gray-200 rounded-lg px-4 py-3 "/>
+      </div>
+
+     
+      <div>
+        <label class="block text-sm font-semibold text-gray-700 mb-2"> Prix maximum </label>
+        <input type="number" placeholder="Maximum" class="w-full border border-gray-200 rounded-lg px-4 py-3 " />
+      </div>
+
+
+      <div class="flex items-end">
+        <button type="button" class="w-full bg-gray-900 text-white rounded-lg px-5 py-3 font-semibold hover:bg-gray-700 transition duration-300" >
+          Rechercher
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% endblock %}

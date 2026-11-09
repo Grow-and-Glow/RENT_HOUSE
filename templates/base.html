@@ -1,0 +1,155 @@
+{% load static %}
+
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>
+      {% block title %}
+        RENT HOUSE
+      {% endblock %}</title>
+
+    <link rel="stylesheet" href="{% static 'src/output.css' %}" />
+
+    {% block extra_css %}
+    {% endblock %}
+  </head>
+
+  <body class="bg-white text-gray-900 flex flex-col min-h-screen">
+    
+    <header class="absolute top-0 left-0 w-full z-50">
+      <nav class="max-w-7xl mx-auto px-6 py-5 flex items-center justify-between">
+        <a href="/" class="text-2xl font-bold flex items-center text-white">
+          <svg xmlns="http://www.w3.org/2000/svg" width="2em" height="2em" viewBox="0 0 48 48"> <path d="M0 0h48v48H0z" fill="none" /> <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" d="M24.479 33.733c-5.74 0-10.35-4.839-9.973-10.66c.344-5.312 4.992-9.329 10.315-9.329h2.378a8.506 8.506 0 0 0 8.506-8.506s-11.908 0-11.908 0c-10.218 0-18.5 8.283-18.5 18.5s8.283 18.5 18.5 18.5h11.908a8.506 8.506 0 0 0-8.506-8.506z"/> <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" d="m34.42 23.091l-6.176-5.98a1.21 1.21 0 0 0-1.683 0l-6.175 5.98c-.533.517-.167 1.42.575 1.42h.782v4.763c0 .367.298.664.664.664h9.991a.664.664 0 0 0 .664-.664V24.51h.783c.742 0 1.107-.903.574-1.42Z" /> <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" d="M28.608 26.436a1.87 1.87 0 0 0-2.393-.006v.006m3.535-1.298a3.68 3.68 0 0 0-4.687 0m5.814-1.364a5.446 5.446 0 0 0-6.948 0"/> </svg>
+          RENT <span class="font-light ml-2.5">HOUSE</span>
+        </a>
+
+        
+        <div class="hidden md:flex items-center gap-8 text-sm font-medium text-white">
+          <a href="/" class="hover:text-gray-300 transition">Accueil</a>
+          <a href="#" class="hover:text-gray-300 transition">Acheter</a>
+          <a href="#" class="hover:text-gray-300 transition">Louer</a>
+          <a href="#" class="hover:text-gray-300 transition">Agences</a>
+          <a href="#" class="hover:text-gray-300 transition">Contact</a>
+          <a href="#" class="border border-white px-5 py-2 hover:bg-white hover:text-black transition" > Connexion </a>
+        </div>
+
+        
+        <button id="menu-btn" class="md:hidden text-white text-2xl" type="button" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="mobile-menu">
+          <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" > <path d="M0 0h24v24H0z" fill="none" /> <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M3 6h18M3 12h18M3 18h18" /> </svg>
+        </button>
+      </nav>
+
+      
+      <div id="mobile-menu" class="hidden md:hidden bg-black/90 backdrop-blur-md px-6 py-6" >
+        <div class="flex flex-col gap-5 text-white">
+          <a href="/" class="hover:text-gray-300 transition">Accueil</a>
+          <a href="#" class="hover:text-gray-300 transition">Acheter</a>
+          <a href="#" class="hover:text-gray-300 transition">Louer</a>
+          <a href="#" class="hover:text-gray-300 transition">Agences</a>
+          <a href="#" class="hover:text-gray-300 transition">Contact</a>
+          <a href="#" class="border border-white px-5 py-2 text-center hover:bg-white hover:text-black transition"> Connexion</a>
+        </div>
+      </div>
+    </header>
+
+
+
+   
+    <main class="grow">
+      {% block content %} 
+      {% endblock %}
+    </main>
+
+
+
+   
+    <footer class="bg-gray-950 text-gray-300">
+      <div class="max-w-7xl mx-auto px-6 py-14">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
+         
+          <div>
+            <a href="/" class="text-2xl font-bold text-white"> RENT <span class="font-light">HOUSE</span> </a>
+            <p class="text-sm leading-relaxed mt-5 text-gray-400">
+              Votre plateforme immobilière de confiance au Burundi. Trouvez facilement des maisons, appartements et villas à acheter ou à louer auprès d'agences immobilières.
+            </p>
+          </div>
+
+  
+          <div>
+            <h3 class="text-white font-semibold mb-5">Navigation</h3>
+            <ul class="space-y-3 text-sm">
+              <li> <a href="/" class="hover:text-white transition">Accueil</a> </li>
+              <li> <a href="#" class="hover:text-white transition">Acheter un bien</a></li>
+              <li> <a href="#" class="hover:text-white transition">Louer un bien</a></li>
+              <li> <a href="#" class="hover:text-white transition">Nos agences</a></li>
+              <li> <a href="#" class="hover:text-white transition">Contact</a></li>
+            </ul>
+          </div>
+
+         
+          <div>
+            <h3 class="text-white font-semibold mb-5">Informations</h3>
+            <ul class="space-y-3 text-sm">
+              <li><a href="#" class="hover:text-white transition">À propos de nous</a></li>
+              <li><a href="#" class="hover:text-white transition">Conditions d'utilisation</a></li>
+              <li><a href="#" class="hover:text-white transition">Politique de confidentialité</a></li>
+            </ul>
+          </div>
+
+         
+          <div>
+            <h3 class="text-white font-semibold mb-5">Contactez-nous</h3>
+            <ul class="space-y-3 text-sm text-gray-400">
+              <li>Burundi, Bujumbura</li>
+              <li>Email : contact@rent-house.bi</li>
+              <li>Téléphone : À définir</li>
+            </ul>
+          </div>
+        </div>
+
+       
+        <div class="border-t border-gray-800 mt-12 pt-6 text-center text-sm text-gray-500" >
+          <p class="flex justify-center items-center gap-1">
+            <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 1024 1024"> <path d="M0 0h1024v1024H0z" fill="none" /> <path fill="currentColor" d="M512 64C264.6 64 64 264.6 64 512s200.6 448 448 448s448-200.6 448-448S759.4 64 512 64m0 820c-205.4 0-372-166.6-372-372s166.6-372 372-372s372 166.6 372 372s-166.6 372-372 372m5.6-532.7c53 0 89 33.8 93 83.4c.3 4.2 3.8 7.4 8 7.4h56.7c2.6 0 4.7-2.1 4.7-4.7c0-86.7-68.4-147.4-162.7-147.4C407.4 290 344 364.2 344 486.8v52.3C344 660.8 407.4 734 517.3 734c94 0 162.7-58.8 162.7-141.4c0-2.6-2.1-4.7-4.7-4.7h-56.8c-4.2 0-7.6 3.2-8 7.3c-4.2 46.1-40.1 77.8-93 77.8c-65.3 0-102.1-47.9-102.1-133.6v-52.6c.1-87 37-135.5 102.2-135.5" /> </svg>
+            {% now "Y" %} RENT HOUSE. Tous droits réservés.</p>
+        </div>
+      </div>
+    </footer>
+
+    
+    <script>
+      const menuBtn = document.getElementById("menu-btn");
+      const mobileMenu = document.getElementById("mobile-menu");
+
+      menuBtn.addEventListener("click", () => {
+        mobileMenu.classList.toggle("hidden");
+
+        const isOpen = !mobileMenu.classList.contains("hidden");
+
+        menuBtn.setAttribute("aria-expanded", isOpen);
+
+        menuBtn.setAttribute(
+          "aria-label",
+          isOpen ? "Fermer le menu" : "Ouvrir le menu",
+        );
+      });
+
+ 
+      mobileMenu.querySelectorAll("a").forEach((link) => {
+        link.addEventListener("click", () => {
+          mobileMenu.classList.add("hidden");
+
+          menuBtn.setAttribute("aria-expanded", "false");
+
+          menuBtn.setAttribute("aria-label", "Ouvrir le menu");
+        });
+      });
+    </script>
+
+    {% block extra_js %}
+    {% endblock %}
+  </body>
+</html>
