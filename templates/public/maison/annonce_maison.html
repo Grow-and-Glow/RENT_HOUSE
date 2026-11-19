@@ -1,0 +1,546 @@
+{% extends "base.html" %} 
+
+{% load static %} 
+
+
+
+{% block content %}
+
+<section  class="w-full h-full" >
+
+    <section style="background: linear-gradient(rgba(34, 33, 33, 0.5)),url('/static/src/photos/photo-1600585154340-be6161a56a0c.jpg'); background-position: center; background-size: cover; " class="relative min-h-[80vh] flex items-center "> 
+        <div class="relative z-10 max-w-7xl mx-auto px-6 w-[90%]">
+
+            <div class="">
+                <h3 class="font-bold font-serif text-6xl text-white capitalize mb-14">choses your house</h3>
+                <p class="font-serif text-white text-[18px]">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos deleniti, <br>impedit cumque sed atque a magnam consectetur veniam sequi fuga <br>repudiandae voluptatum numquam tenetur, accusantium quae amet aliquam blanditiis nisi.
+                </p>
+            </dv> 
+        </div>
+    </section>
+
+    <section class="w-[90%] m-auto bg-white p-4 rounded-2xl">
+
+        <div>
+            <div class="w-full mx-auto flex  items-center justify-center gap-2 py-4  ">
+                <button onclick="scrollquartier(-200)" class="w-16 h-16 bg-gray-200  shadow-lg rounded-full flex items-center justify-center text-4xl font-bold z-10 hover:bg-gray-100"> < </button>
+
+                <div id="quartier" class="flex gap-1 overflow-x-auto scroll-smooth transition-all flex-1 py-1 px-1 min-w-0 flex-nowrap scrollbar-none">
+                    <div class="w-37.5 flex flex-col items-center shrink-0  cursor-pointer">
+                        <div class="p-0.75 rounded-full bg-linear-to-tr from-yellow-400 via-pink-500 to-purple-600">
+                            <img src="static/src/photos/1794220368467.jpg" alt="" class="w-24 h-24 rounded-full border-[3px] border-white object-cover">
+                        </div>
+                        <span class="text-xs font-medium">Rohero</span>
+                    </div>
+                    <div class="w-37.5 flex flex-col items-center shrink-0  cursor-pointer">
+                        <div class="p-0.75 rounded-full bg-linear-to-tr from-yellow-400 via-pink-500 to-purple-600">
+                            <img src="static/src/photos/1794220377253.jpg" alt="" class="w-24 h-24 rounded-full border-[3px] border-white object-cover">
+                        </div>
+                        <span class="text-xs font-medium">Rohero</span>
+                    </div>
+                    <div class="w-37.5 flex flex-col items-center shrink-0  cursor-pointer">
+                        <div class="p-0.75 rounded-full bg-linear-to-tr from-yellow-400 via-pink-500 to-purple-600">
+                            <img src="static/src/photos/1794220441397.jpg" alt="" class="w-24 h-24 rounded-full border-[3px] border-white object-cover">
+                        </div>
+                        <span class="text-xs font-medium">Rohero</span>
+                    </div>
+                    <div class="w-37.5 flex flex-col items-center shrink-0  cursor-pointer">
+                        <div class="p-0.75 rounded-full bg-linear-to-tr from-yellow-400 via-pink-500 to-purple-600">
+                            <img src="static\src\photos\1794220921688.jpg" alt="" class="w-24 h-24 rounded-full border-[3px] border-white object-cover">
+                        </div>
+                        <span class="text-xs font-medium">Rohero</span>
+                    </div>
+                    <div class="w-37.5 flex flex-col items-center shrink-0 cursor-pointer">
+                        <div class="p-0.75 rounded-full bg-linear-to-tr from-yellow-400 via-pink-500 to-purple-600">
+                            <img src="static\src\photos\1794221018865.jpg" alt="" class="w-24 h-24 rounded-full border-[3px] border-white object-cover">
+                        </div>
+                        <span class="text-xs font-medium">Rohero</span>
+                    </div>
+                    <div class="w-37.5 flex flex-col items-center shrink-0  cursor-pointer">
+                        <div class="p-0.75 rounded-full bg-linear-to-tr from-yellow-400 via-pink-500 to-purple-600">
+                            <img src="static\src\photos\1794220921688.jpg" alt="" class="w-24 h-24 rounded-full border-[3px] border-white object-cover">
+                        </div>
+                        <span class="text-xs font-medium">Tanganyika</span>
+                    </div>
+                    <div class="w-37.5 flex flex-col items-center shrink-0  cursor-pointer">
+                        <div class="p-0.75 rounded-full bg-linear-to-tr from-yellow-400 via-pink-500 to-purple-600">
+                            <img src="static\src\photos\1794220713082.jpg" alt="" class="w-24 h-24 rounded-full border-[3px] border-white object-cover">
+                        </div>
+                        <span class="text-xs font-medium">Kiriri</span>
+                    </div>
+                    <div class="w-37.5 flex flex-col items-center shrink-0  cursor-pointer">
+                        <div class="p-0.75 rounded-full bg-linear-to-tr from-yellow-400 via-pink-500 to-purple-600">
+                            <img src="/static/photos/houses.jpg" alt="" class="w-24 h-24 rounded-full border-[3px] border-white object-cover">
+                        </div>
+                        <span class="text-xs font-medium">Ngagara</span>
+                    </div>
+                    <div class="w-37.5 flex flex-col items-center shrink-0  cursor-pointer">
+                        <div class="p-0.75 rounded-full bg-linear-to-tr from-yellow-400 via-pink-500 to-purple-600">
+                            <img src="static\src\photos\1794220923837.jpg" alt="" class="w-24 h-24 rounded-full border-[3px] border-white object-cover">
+                        </div>
+                        <span class="text-xs font-medium">Kinama</span>
+                    </div>
+                    <div class="w-37.5 flex flex-col items-center shrink-0  cursor-pointer">
+                        <div class="p-0.75 rounded-full bg-linear-to-tr from-yellow-400 via-pink-500 to-purple-600">
+                            <img src="static\src\photos\photo-1600585154340-be6161a56a0c.jpg" alt="" class="w-24 h-24 rounded-full border-[3px] border-white object-cover">
+                        </div>
+                        <span class="text-xs font-medium"></span>
+                    </div>
+                    <div class="w-37.5 flex flex-col items-center shrink-0  cursor-pointer">
+                        <div class="p-0.75 rounded-full bg-linear-to-tr from-yellow-400 via-pink-500 to-purple-600">
+                            <img src="static\src\photos\1794221014959.jpg" alt="" class="w-24 h-24 rounded-full border-[3px] border-white object-cover">
+                        </div>
+                        <span class="text-xs font-medium">Kamenge city</span>
+                    </div>
+                </div>
+                
+                <button onclick="scrollquartier(200)" class="w-16 h-16 bg-gray-200 shadow-lg rounded-full flex items-center justify-center text-4xl font-bold z-10 hover:bg-gray-100"> > </button>
+            </div>
+        </div>
+
+        <div class="flex-wrap flex gap-4 justify-around">
+
+            <div class="w-[23%] bg-white border border-gray-200 rounded-xl overflow-hidden p-2">
+                <div class="relative">
+                    <div>
+                        <img src="static\src\photos\1794220923837.jpg" class="w-full h-[30vh] object-cover rounded-lg">
+                    </div>
+                    <div class="absolute bottom-2 left-2 bg-white px-3 py-1 rounded-full text-sm font-bold shadow ">
+                        <span class="font-bold">20000$</span>
+                    </div>
+                </div>
+                <div class="flex gap-1 flex-col">
+                    <div class="p-2">
+                        <h4 class="font-bold text-[15px]">Emerald Valley Terrace Home</h4>
+                        <small class="text-gray-500">
+                            Zurich, Switzerland
+                        </small>
+                    </div>
+                    <div class="flex justify-between p-2  border-t border-gray-100 text-[12px]">
+                        <div>
+                            <span class="font-bold">Bulti-Up Area</span> <br>
+                            <small>1,920 sqft</small>
+                        </div>
+                        <div>
+                            <span class="font-bold">Bulti-Up Area</span> <br>
+                            <small>1,920 sqft</small>
+                        </div>
+                        <div>
+                            <span class="font-bold">Bulti-Up Area</span> <br>
+                            <small>1,920 sqft</small>
+                        </div>
+                    </div>
+                </div>
+                <button class="bg-blue-500 px-3 py-1 rounded-full text-sm font-bold shadow capitalize ">
+                    Detail
+                </button>
+            </div>
+
+            <!-- ==============================SUITE====================================== -->
+            
+            <div class="w-[23%] bg-white border border-gray-200 rounded-xl overflow-hidden p-2">
+                <div class="relative">
+                    <div>
+                        <img src="static\src\photos\1794221016877.jpg" class="w-full h-[30vh] object-cover rounded-lg">
+                    </div>
+                    <div class="absolute bottom-2 left-2 bg-white px-3 py-1 rounded-full text-sm font-bold shadow ">
+                        <span class="font-bold">20000$</span>
+                    </div>
+                </div>
+                <div class="flex gap-1 flex-col">
+                    <div class="p-2">
+                        <h4 class="font-bold text-[15px]">Emerald Valley Terrace Home</h4>
+                        <small class="text-gray-500">
+                            Zurich, Switzerland
+                        </small>
+                    </div>
+                    <div class="flex justify-between p-2  border-t border-gray-100 text-[12px]">
+                        <div>
+                            <span class="font-bold">Bulti-Up Area</span> <br>
+                            <small>1,920 sqft</small>
+                        </div>
+                        <div>
+                            <span class="font-bold">Bulti-Up Area</span> <br>
+                            <small>1,920 sqft</small>
+                        </div>
+                        <div>
+                            <span class="font-bold">Bulti-Up Area</span> <br>
+                            <small>1,920 sqft</small>
+                        </div>
+                    </div>
+                </div>
+                <button class="bg-blue-500 px-3 py-1 rounded-full text-sm font-bold shadow capitalize ">
+                    Detail
+                </button>
+            </div>
+            
+
+            <div class="w-[23%] bg-white border border-gray-200 rounded-xl overflow-hidden p-2">
+                <div class="relative">
+                    <div>
+                        <img src="static\src\photos\photo-1600585154340-be6161a56a0c.jpg" class="w-full h-[30vh] object-cover rounded-lg">
+                    </div>
+                    <div class="absolute bottom-2 left-2 bg-white px-3 py-1 rounded-full text-sm font-bold shadow ">
+                        <span class="font-bold">20000$</span>
+                    </div>
+                </div>
+                <div class="flex gap-1 flex-col">
+                    <div class="p-2">
+                        <h4 class="font-bold text-[15px]">Emerald Valley Terrace Home</h4>
+                        <small class="text-gray-500">
+                            Zurich, Switzerland
+                        </small>
+                    </div>
+                    <div class="flex justify-between p-2  border-t border-gray-100 text-[12px]">
+                        <div>
+                            <span class="font-bold">Bulti-Up Area</span> <br>
+                            <small>1,920 sqft</small>
+                        </div>
+                        <div>
+                            <span class="font-bold">Bulti-Up Area</span> <br>
+                            <small>1,920 sqft</small>
+                        </div>
+                        <div>
+                            <span class="font-bold">Bulti-Up Area</span> <br>
+                            <small>1,920 sqft</small>
+                        </div>
+                    </div>
+                </div>
+                <button class="bg-blue-500 px-3 py-1 rounded-full text-sm font-bold shadow capitalize ">
+                    Detail
+                </button>
+            </div>
+
+            <div class="w-[23%] bg-white border border-gray-200 rounded-xl overflow-hidden p-2">
+                <div class="relative">
+                    <div>
+                        <img src="static\src\photos\1794220918374.jpg" class="w-full h-[30vh] object-cover rounded-lg">
+                    </div>
+                    <div class="absolute bottom-2 left-2 bg-white px-3 py-1 rounded-full text-sm font-bold shadow ">
+                        <span class="font-bold">20000$</span>
+                    </div>
+                </div>
+                <div class="flex gap-1 flex-col">
+                    <div class="p-2">
+                        <h4 class="font-bold text-[15px]">Emerald Valley Terrace Home</h4>
+                        <small class="text-gray-500">
+                            Zurich, Switzerland
+                        </small>
+                    </div>
+                    <div class="flex justify-between p-2  border-t border-gray-100 text-[12px]">
+                        <div>
+                            <span class="font-bold">Bulti-Up Area</span> <br>
+                            <small>1,920 sqft</small>
+                        </div>
+                        <div>
+                            <span class="font-bold">Bulti-Up Area</span> <br>
+                            <small>1,920 sqft</small>
+                        </div>
+                        <div>
+                            <span class="font-bold">Bulti-Up Area</span> <br>
+                            <small>1,920 sqft</small>
+                        </div>
+                    </div>
+                </div>
+                <button class="bg-blue-500 px-3 py-1 rounded-full text-sm font-bold shadow capitalize ">
+                    Detail
+                </button>
+            </div>
+
+            <div class="w-[23%] bg-white border border-gray-200 rounded-xl overflow-hidden p-2">
+                <div class="relative">
+                    <div>
+                        <img src="static\src\photos\1794220921688.jpg" class="w-full h-[30vh] object-cover rounded-lg">
+                    </div>
+                    <div class="absolute bottom-2 left-2 bg-white px-3 py-1 rounded-full text-sm font-bold shadow ">
+                        <span class="font-bold">20000$</span>
+                    </div>
+                </div>
+                <div class="flex gap-1 flex-col">
+                    <div class="p-2">
+                        <h4 class="font-bold text-[15px]">Emerald Valley Terrace Home</h4>
+                        <small class="text-gray-500">
+                            Zurich, Switzerland
+                        </small>
+                    </div>
+                    <div class="flex justify-between p-2  border-t border-gray-100 text-[12px]">
+                        <div>
+                            <span class="font-bold">Bulti-Up Area</span> <br>
+                            <small>1,920 sqft</small>
+                        </div>
+                        <div>
+                            <span class="font-bold">Bulti-Up Area</span> <br>
+                            <small>1,920 sqft</small>
+                        </div>
+                        <div>
+                            <span class="font-bold">Bulti-Up Area</span> <br>
+                            <small>1,920 sqft</small>
+                        </div>
+                    </div>
+                </div>
+                <button class="bg-blue-500 px-3 py-1 rounded-full text-sm font-bold shadow capitalize ">
+                    Detail
+                </button>
+            </div>
+
+            <div class="w-[23%] bg-white border border-gray-200 rounded-xl overflow-hidden p-2">
+                <div class="relative">
+                    <div>
+                        <img src="static\src\photos\1794221012824.jpg" class="w-full h-[30vh] object-cover rounded-lg">
+                    </div>
+                    <div class="absolute bottom-2 left-2 bg-white px-3 py-1 rounded-full text-sm font-bold shadow ">
+                        <span class="font-bold">20000$</span>
+                    </div>
+                </div>
+                <div class="flex gap-1 flex-col">
+                    <div class="p-2">
+                        <h4 class="font-bold text-[15px]">Emerald Valley Terrace Home</h4>
+                        <small class="text-gray-500">
+                            Zurich, Switzerland
+                        </small>
+                    </div>
+                    <div class="flex justify-between p-2  border-t border-gray-100 text-[12px]">
+                        <div>
+                            <span class="font-bold">Bulti-Up Area</span> <br>
+                            <small>1,920 sqft</small>
+                        </div>
+                        <div>
+                            <span class="font-bold">Bulti-Up Area</span> <br>
+                            <small>1,920 sqft</small>
+                        </div>
+                        <div>
+                            <span class="font-bold">Bulti-Up Area</span> <br>
+                            <small>1,920 sqft</small>
+                        </div>
+                    </div>
+                </div>
+                <button class="bg-blue-500 px-3 py-1 rounded-full text-sm font-bold shadow capitalize ">
+                    Detail
+                </button>
+            </div>
+
+            <div class="w-[23%] bg-white border border-gray-200 rounded-xl overflow-hidden p-2">
+                <div class="relative">
+                    <div>
+                        <img src="static\src\photos\photo-1600585154340-be6161a56a0c.jpg" class="w-full h-[30vh] object-cover rounded-lg">
+                    </div>
+                    <div class="absolute bottom-2 left-2 bg-white px-3 py-1 rounded-full text-sm font-bold shadow ">
+                        <span class="font-bold">20000$</span>
+                    </div>
+                </div>
+                <div class="flex gap-1 flex-col">
+                    <div class="p-2">
+                        <h4 class="font-bold text-[15px]">Emerald Valley Terrace Home</h4>
+                        <small class="text-gray-500">
+                            Zurich, Switzerland
+                        </small>
+                    </div>
+                    <div class="flex justify-between p-2  border-t border-gray-100 text-[12px]">
+                        <div>
+                            <span class="font-bold">Bulti-Up Area</span> <br>
+                            <small>1,920 sqft</small>
+                        </div>
+                        <div>
+                            <span class="font-bold">Bulti-Up Area</span> <br>
+                            <small>1,920 sqft</small>
+                        </div>
+                        <div>
+                            <span class="font-bold">Bulti-Up Area</span> <br>
+                            <small>1,920 sqft</small>
+                        </div>
+                    </div>
+                </div>
+                <button class="bg-blue-500 px-3 py-1 rounded-full text-sm font-bold shadow capitalize ">
+                    Detail
+                </button>
+            </div>
+
+            <div class="w-[23%] bg-white border border-gray-200 rounded-xl overflow-hidden p-2">
+                <div class="relative">
+                    <div>
+                        <img src="static\src\photos\1794220444673.jpg" class="w-full h-[30vh] object-cover rounded-lg">
+                    </div>
+                    <div class="absolute bottom-2 left-2 bg-white px-3 py-1 rounded-full text-sm font-bold shadow ">
+                        <span class="font-bold">20000$</span>
+                    </div>
+                </div>
+                <div class="flex gap-1 flex-col">
+                    <div class="p-2">
+                        <h4 class="font-bold text-[15px]">Emerald Valley Terrace Home</h4>
+                        <small class="text-gray-500">
+                            Zurich, Switzerland
+                        </small>
+                    </div>
+                    <div class="flex justify-between p-2  border-t border-gray-100 text-[12px]">
+                        <div>
+                            <span class="font-bold">Bulti-Up Area</span> <br>
+                            <small>1,920 sqft</small>
+                        </div>
+                        <div>
+                            <span class="font-bold">Bulti-Up Area</span> <br>
+                            <small>1,920 sqft</small>
+                        </div>
+                        <div>
+                            <span class="font-bold">Bulti-Up Area</span> <br>
+                            <small>1,920 sqft</small>
+                        </div>
+                    </div>
+                </div>
+                <button class="bg-blue-500 px-3 py-1 rounded-full text-sm font-bold shadow capitalize ">
+                    Detail
+                </button>
+            </div>
+
+            <div class="w-[23%] bg-white border border-gray-200 rounded-xl overflow-hidden p-2">
+                <div class="relative">
+                    <div>
+                        <img src="static\src\photos\1794220923837.jpg" class="w-full h-[30vh] object-cover rounded-lg">
+                    </div>
+                    <div class="absolute bottom-2 left-2 bg-white px-3 py-1 rounded-full text-sm font-bold shadow ">
+                        <span class="font-bold">20000$</span>
+                    </div>
+                </div>
+                <div class="flex gap-1 flex-col">
+                    <div class="p-2">
+                        <h4 class="font-bold text-[15px]">Emerald Valley Terrace Home</h4>
+                        <small class="text-gray-500">
+                            Zurich, Switzerland
+                        </small>
+                    </div>
+                    <div class="flex justify-between p-2  border-t border-gray-100 text-[12px]">
+                        <div>
+                            <span class="font-bold">Bulti-Up Area</span> <br>
+                            <small>1,920 sqft</small>
+                        </div>
+                        <div>
+                            <span class="font-bold">Bulti-Up Area</span> <br>
+                            <small>1,920 sqft</small>
+                        </div>
+                        <div>
+                            <span class="font-bold">Bulti-Up Area</span> <br>
+                            <small>1,920 sqft</small>
+                        </div>
+                    </div>
+                </div>
+                <button class="bg-blue-500 px-3 py-1 rounded-full text-sm font-bold shadow capitalize ">
+                    Detail
+                </button>
+            </div>
+
+            <div class="w-[23%] bg-white border border-gray-200 rounded-xl overflow-hidden p-2">
+                <div class="relative">
+                    <div>
+                        <img src="static\src\photos\1794220525377.jpg" class="w-full h-[30vh] object-cover rounded-lg">
+                    </div>
+                    <div class="absolute bottom-2 left-2 bg-white px-3 py-1 rounded-full text-sm font-bold shadow ">
+                        <span class="font-bold">20000$</span>
+                    </div>
+                </div>
+                <div class="flex gap-1 flex-col">
+                    <div class="p-2">
+                        <h4 class="font-bold text-[15px]">Emerald Valley Terrace Home</h4>
+                        <small class="text-gray-500">
+                            Zurich, Switzerland
+                        </small>
+                    </div>
+                    <div class="flex justify-between p-2  border-t border-gray-100 text-[12px]">
+                        <div>
+                            <span class="font-bold">Bulti-Up Area</span> <br>
+                            <small>1,920 sqft</small>
+                        </div>
+                        <div>
+                            <span class="font-bold">Bulti-Up Area</span> <br>
+                            <small>1,920 sqft</small>
+                        </div>
+                        <div>
+                            <span class="font-bold">Bulti-Up Area</span> <br>
+                            <small>1,920 sqft</small>
+                        </div>
+                    </div>
+                </div>
+                <button class="bg-blue-500 px-3 py-1 rounded-full text-sm font-bold shadow capitalize ">
+                    Detail
+                </button>
+            </div>
+
+            <div class="w-[23%] bg-white border border-gray-200 rounded-xl overflow-hidden p-2">
+                <div class="relative">
+                    <div>
+                        <img src="static\src\photos\1794220706617.jpg" class="w-full h-[30vh] object-cover rounded-lg">
+                    </div>
+                    <div class="absolute bottom-2 left-2 bg-white px-3 py-1 rounded-full text-sm font-bold shadow ">
+                        <span class="font-bold">20000$</span>
+                    </div>
+                </div>
+                <div class="flex gap-1 flex-col">
+                    <div class="p-2">
+                        <h4 class="font-bold text-[15px]">Emerald Valley Terrace Home</h4>
+                        <small class="text-gray-500">
+                            Zurich, Switzerland
+                        </small>
+                    </div>
+                    <div class="flex justify-between p-2  border-t border-gray-100 text-[12px]">
+                        <div>
+                            <span class="font-bold">Bulti-Up Area</span> <br>
+                            <small>1,920 sqft</small>
+                        </div>
+                        <div>
+                            <span class="font-bold">Bulti-Up Area</span> <br>
+                            <small>1,920 sqft</small>
+                        </div>
+                        <div>
+                            <span class="font-bold">Bulti-Up Area</span> <br>
+                            <small>1,920 sqft</small>
+                        </div>
+                    </div>
+                </div>
+                <button class="bg-blue-500 px-3 py-1 rounded-full text-sm font-bold shadow capitalize ">
+                    Detail
+                </button>
+            </div>
+
+
+            <div class="w-[23%] bg-white border border-gray-200 rounded-xl overflow-hidden p-2">
+                <div class="relative">
+                    <div>
+                        <img src="static\src\photos\1794220710619.jpg" class="w-full h-[30vh] object-cover rounded-lg">
+                    </div>
+                    <div class="absolute bottom-2 left-2 bg-white px-3 py-1 rounded-full text-sm font-bold shadow ">
+                        <span class="font-bold">20000$</span>
+                    </div>
+                </div>
+                <div class="flex gap-1 flex-col">
+                    <div class="p-2">
+                        <h4 class="font-bold text-[15px]">Emerald Valley Terrace Home</h4>
+                        <small class="text-gray-500">
+                            Zurich, Switzerland
+                        </small>
+                    </div>
+                    <div class="flex justify-between p-2  border-t border-gray-100 text-[12px]">
+                        <div>
+                            <span class="font-bold">Bulti-Up Area</span> <br>
+                            <small>1,920 sqft</small>
+                        </div>
+                        <div>
+                            <span class="font-bold">Bulti-Up Area</span> <br>
+                            <small>1,920 sqft</small>
+                        </div>
+                        <div>
+                            <span class="font-bold">Bulti-Up Area</span> <br>
+                            <small>1,920 sqft</small>
+                        </div>
+                    </div>
+                </div>
+                <button class="bg-blue-500 px-3 py-1 rounded-full text-sm font-bold shadow capitalize ">
+                    Detail
+                </button>
+            </div>
+
+
+        </div>
+    </section>
+</section>
+
+
+{% endblock %}

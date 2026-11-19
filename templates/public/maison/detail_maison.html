@@ -1,0 +1,100 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>detail-maison</title>
+    <link rel="stylesheet" href="{% static 'src/output.css' %}">
+</head>
+<body class="w-full flex justify-center bg-gray-300">
+
+    <!-- NAVBAR -->
+
+    <nav class="w-full h-[10vh] bg-black flex justify-between items-center fixed">
+        <button type="button" class="text-3xl font-bold text-gray-300" id="rtn">
+            <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 512 512">
+            	<path d="M0 0h512v512H0z" fill="none" />
+            	<path fill="currentColor" d="m19.828 18.256l-.002.015c249.642 36.995 371.904 169.983 397.32 278.01c-2.094 5.977-4.496 11.044-7.068 14.968c-17.29 26.383-62.522 40.075-101.654 28.596c5.984-19.75 10.132-39.834 12.07-59.12c-95.46 8.177-212.544 8.42-301.207-22.642c41.727 95.317 99.325 164.465 164.983 230.08c18.296-2.164 35.807-11.35 51.837-25.37c85.218 34.667 188.066-2.555 226.748-60.68c46.922-70.5 74.07-317.52-167.462-383.856H232.81c160.326 54.874 195.73 167.74 191.573 239.03c-37.15-93.627-137.68-191.855-312.38-239.03H19.83z" />
+            </svg>
+        </button>
+
+        <button type="button" class="text-3xl font-bold text-gray-300">
+            <svg xmlns="http://www.w3.org/2000/svg" width="60px" height="60px" viewBox="0 0 512 512">
+	            <path d="M0 0h512v512H0z" fill="none" />
+	            <path fill="none" stroke="#e2e8f0" stroke-dasharray="16.9 56.2" stroke-linecap="round" stroke-linejoin="round" stroke-width="12" d="M384 256a128 128 0 0 0-128-128c-169.8 6.7-169.7 249.3 0 256a128 128 0 0 0 128-128" />
+	            <path fill="none" stroke="#72b9d5" stroke-linecap="round" stroke-linejoin="round" stroke-width="13.7" d="M308.2 139a129.4 129.4 0 0 0-17.4-6.4l.6.5c84.2 88.2 19.3 234.1-102.6 230.7l-.8-.2a129 129 0 0 0 16.3 8.7a127.7 127.7 0 1 0 103.9-233.4Z" />
+            </svg>
+        </button>
+    </nav>
+
+    <!-- SECTION -->
+
+    <section id="detail_img_accueil" class="w-[90%]  pb-2.5 block">
+        
+        <div class="w-full min-h-[75vh] flex justify-around items-center pt-[10vh] pb-2.5 mb-5 shadow-2xl  rounded-[10px]">
+
+            <img src="/static/src/photos/1794220444673.jpg" alt="" class="w-125 h-87.5 rounded-[10px]">
+            <div class="w-[45%] min-h-[50vh] pb-2.5">
+
+                <h1 class="font-bold text-4xl text-center pb-2.5">Detail maison</h1>
+
+                <div class="w-full min-h-[40vh] grid grid-cols-2 gap-3">
+                    <div class=" min-h-[13vh] p-4.5 rounded-[10px] bg-gray-200"><p>Nombres de pièces maison :  </p><span class="font-bold">10 pièces</span></div>
+                    <div class=" min-h-[13vh] p-4.5 rounded-[10px] bg-gray-200"><p>Quartier : </p><span class="font-bold">Kibenga</span></div>                    
+                    <div class=" min-h-[13vh] p-4.5 rounded-[10px] bg-gray-200"><p>Loyer : </p><span class="font-bold">1 500 000 fbu</span></div>
+                    <div class=" min-h-[13vh] p-4.5 rounded-[10px] bg-gray-200"><p>Garantie : </p><span class="font-bold">4 mois</span></div>
+                    <div class=" min-h-[13vh] p-4.5 rounded-[10px] col-span-2 h-[10] bg-gray-200"><p>Description : </p><span class="font-bold">planifiez des vacances.</span></div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="w-full min-h-[40vh]  flex gap-2.5 justify-start items-center mt-10 shadow-2xl rounded-[10px]  overflow-x-auto scroll-smooth p-2 [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-:none]">
+            <img src="/static/src/photos/1794220453168.jpg" alt="" class="gallery-img  w-50 h-50 cursor-pointer hover:w-55 hover:h-55 rounded-[10px]">
+            <img src="/static/src/photos/1794220447859.jpg" alt="" class="gallery-img  w-50 h-50 cursor-pointer hover:w-55 hover:h-55 rounded-[10px]">
+            <img src="/static/src/photos/1794220455881.jpg" alt="" class="gallery-img  w-50 h-50 cursor-pointer hover:w-55 hover:h-55 rounded-[10px]">
+            <img src="/static/src/photos/1794220463432.jpg" alt="" class="gallery-img  w-50 h-50 cursor-pointer hover:w-55 hover:h-55 rounded-[10px]">
+            <img src="/static/src/photos/1794220465781.jpg" alt="" class="gallery-img  w-50 h-50 cursor-pointer hover:w-55 hover:h-55 rounded-[10px]">
+            <img src="/static/src/photos/1794220468680.jpg" alt="" class="gallery-img  w-50 h-50 cursor-pointer hover:w-55 hover:h-55 rounded-[10px]">
+            <img src="/static/src/photos/1794220477399.jpg" alt="" class="gallery-img  w-50 h-50 cursor-pointer hover:w-55 hover:h-55 rounded-[10px]">
+            <img src="/static/src/photos/1794220482176.jpg" alt="" class="gallery-img  w-50 h-50 cursor-pointer hover:w-55 hover:h-55 rounded-[10px]">
+            <img src="/static/src/photos/1794220487491.jpg" alt="" class="gallery-img  w-50 h-50 cursor-pointer hover:w-55 hover:h-55 rounded-[10px]">
+            <img src="/static/src/photos/1794220490140.jpg" alt="" class="gallery-img  w-50 h-50 cursor-pointer hover:w-55 hover:h-55 rounded-[10px]">
+            <img src="/static/src/photos/1794220492596.jpg" alt="" class="gallery-img  w-50 h-50 cursor-pointer hover:w-55 hover:h-55 rounded-[10px]">
+            <img src="/static/src/photos/1794220497470.jpg" alt="" class="gallery-img  w-50 h-50 cursor-pointer hover:w-55 hover:h-55 rounded-[10px]">
+            <img src="/static/src/photos/1794220501837.jpg" alt="" class="gallery-img  w-50 h-50 cursor-pointer hover:w-55 hover:h-55 rounded-[10px]">
+            <img src="/static/src/photos/1794220506743.jpg" alt="" class="gallery-img  w-50 h-50 cursor-pointer hover:w-55 hover:h-55 rounded-[10px]">
+            <img src="/static/src/photos/1794220509242.jpg" alt="" class="gallery-img  w-50 h-50 cursor-pointer hover:w-55 hover:h-55 rounded-[10px]">
+            <img src="/static/src/photos/1794220511852.jpg" alt="" class="gallery-img  w-50 h-50 cursor-pointer hover:w-55 hover:h-55 rounded-[10px]">
+            <img src="/static/src/photos/1794220517348.jpg" alt="" class="gallery-img  w-50 h-50 cursor-pointer hover:w-55 hover:h-55 rounded-[10px]">
+            <img src="/static/src/photos/1794220519609.jpg" alt="" class="gallery-img  w-50 h-50 cursor-pointer hover:w-55 hover:h-55 rounded-[10px]">
+            <img src="/static/src/photos/1794220525377.jpg" alt="" class="gallery-img  w-50 h-50 cursor-pointer hover:w-55 hover:h-55 rounded-[10px]">
+        </div>
+         
+        <div class="w-full h-[10vh] flex justify-center items-center">
+            <button type="button" class="w-50 h-10 font-bold bg-blue-600 cursor-pointer hover:bg-blue-950 text-white rounded-[50px]">choisir</button>
+        </div>
+    </section>
+    <div id="viewer" class="w-full h-screen hidden">
+
+        <div class="w-full h-[15vh] flex items-center gap-4 pt-[10vh]">
+            <button type="button" id="rtnbtn" class="w-50 h-10 font-bold bg-red-500 rounded-[10px]">retourner</button>
+        </div>
+
+        <div class="w-full h-[70vh] flex items-center justify-center gap-4">
+            <button id="precBtn" class="w-30 h-10 bg-amber-300 rounded-2xl cursor-pointer ">Precedente</button>
+
+            <div class="w-[60%] h-[50vh] border-2 border-gray-300 flex justify-center items-center rounded-2xl shadow-2xl">
+                <img src="" alt="" id="mainImage" class="max-w-[95%] h-[55vh] rounded-2xl shadow-2xl">
+            </div>
+
+            <button id="suivBtn" class="w-30 h-10 shadow-2xl rounded-2xl cursor-pointer ">suivante</button>
+        </div>
+
+        <p id="counter" class="font-bold">1</p>
+    </div>
+
+     <script src="{% static 'scripts.js' %}"></script>
+</body>
+</html>
