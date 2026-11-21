@@ -13,5 +13,8 @@ urlpatterns = [
     path(route='maison/annonce_maison', view=views.annonce_maison, name='annonce-maison'),
 
     # ========================urls pour authentification ==================
-    path(route='authentification/inscription', view=views.inscription, name='inscription')
+    path(route='authentification/inscription', view=views.inscription, name='inscription'),
+
+    # Base App
+    path(route="app/",view=views.app, name="baseApp")
 ]
