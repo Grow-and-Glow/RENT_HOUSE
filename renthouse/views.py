@@ -20,3 +20,13 @@ def annonce_maison(request):
 # ===============================authentification=====================================
 def inscription(request):
     return render(request=request, template_name='public/authentification/inscription.html', context={})
+
+
+# Base app
+
+def app(request):
+    return render(
+        request= request,
+        template_name= "baseApp.html",
+        context={}
+    )
