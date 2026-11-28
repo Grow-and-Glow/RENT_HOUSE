@@ -1,10 +1,26 @@
 from django.db import models
 from django.utils.translation import gettext_lazy as _
+from django.utils import timezone
 
 
 class Sexe(models.TextChoices):
     MASCULIN = "M", "Masculin"
     FEMININ = "F", "Féminin"
+
+
+class TransactionType(models.TextChoices):
+    LOCATION = "LOCATION", "À louer"
+    VENTE = "VENTE", "À vendre"
+
+class HouseType(models.TextChoices):
+    MAISON = "MAISON", "Maison"
+    APPARTEMENT = "APPARTEMENT", "Appartement"
+    VILLA = "VILLA", "Villa"
+
+class HouseStatus(models.TextChoices):
+    PENDING = "EN_ATTENTE", "En attente"
+    PUBLISHED = "PUBLIEE", "Publiée"
+    REFUSED = "REFUSEE", "Refusée"
 
 
 class Quarter(models.Model):
@@ -41,7 +57,7 @@ class Commissioner(models.Model):
         ordering=["lastname_com","firstname_com"]
 
     def __str__(self):
-        return f"{self.lastname_com_com} {self.firstname_com}"
+        return f"{self.lastname_com} {self.firstname_com}"
 
 class UserCom(models.Model):
 
@@ -68,23 +84,39 @@ class UserCom(models.Model):
 class House(models.Model):
 
     """le modele maison qui gere les donnees de la maison publiee"""
-
-    profil_house = models.ImageField(verbose_name=_("profile de la maison"))
+    title = models.CharField(max_length=150, default="Maison", verbose_name=_("titre"))
+    house_type = models.CharField(max_length=20, choices=HouseType.choices, default=HouseType.MAISON)
+    transaction_type = models.CharField(max_length=10, choices=TransactionType.choices, default=TransactionType.LOCATION)
+    status = models.CharField(max_length=12, choices=HouseStatus.choices, default=HouseStatus.PENDING)
+    bedrooms = models.PositiveIntegerField(default=1)
+    bathrooms = models.PositiveIntegerField(default=1)
+    profil_house = models.ImageField(upload_to="houses/profiles/", verbose_name=_("profile de la maison"))
+    rent = models.DecimalField(max_digits=12, decimal_places=2, null=True, blank=True, verbose_name=_("loyer de la maison"))
+    bail = models.DecimalField(max_digits=12, decimal_places=2, null=True, blank=True, verbose_name=_("garantie de la maison"))
+    sale_price = models.DecimalField(max_digits=14, decimal_places=2, null=True, blank=True, verbose_name=_("prix de vente"))
+    created_at = models.DateTimeField(default=timezone.now)
     piece_house = models.PositiveIntegerField(verbose_name=_("pièce de la maison"))
     description = models.TextField(verbose_name=_("description de la maison"))
     quarter = models.ForeignKey(
         Quarter, on_delete=models.PROTECT, related_name="maisons", verbose_name=_("quartier de la maion")
     )
-    rent = models.DecimalField(max_digits=12, decimal_places=2,verbose_name=_("loyer de la maison"))
-    bail = models.DecimalField(max_digits=12, decimal_places=2,verbose_name=_("garantie de la maison"))
     user_com_id= models.ForeignKey(
         UserCom, on_delete=models.CASCADE, related_name="maisons", verbose_name=_("commissionnaire de la maison")
     )
+
+    @property
+    def is_rental(self):
+        return self.transaction_type == TransactionType.LOCATION
+
+    @property
+    def price(self):
+        return self.rent if self.is_rental else self.sale_price
 
     class Meta:
         db_table = "house"
         verbose_name = "Maison"
         verbose_name_plural = "Maisons"
+        ordering = ["-created_at"]
 
     def __str__(self):
         return f"House {self.quarter}"
@@ -102,7 +134,7 @@ class PictureHouse(models.Model):
         verbose_name_plural = "Photo_maisons"
 
     def __str__(self):
-        return f"PictureHouse {self.id_photo} - House {self.maison_id}"
+        return f"PictureHouse {self.pk} - House {self.id_house_id}"
     
 class DataLocation(models.Model):
 

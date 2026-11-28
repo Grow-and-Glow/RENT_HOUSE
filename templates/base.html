@@ -46,10 +46,10 @@
       <div id="mobile-menu" class="hidden md:hidden bg-black/90 backdrop-blur-md px-6 py-6" >
         <div class="flex flex-col gap-5 text-white">
           <a href="/" class="hover:text-gray-300 transition">Accueil</a>
-          <a href="#" class="hover:text-gray-300 transition">Acheter</a>
-          <a href="#" class="hover:text-gray-300 transition">Louer</a>
-          <a href="#" class="hover:text-gray-300 transition">Agences</a>
-          <a href="#" class="hover:text-gray-300 transition">Contact</a>
+          <a href="#" class="hover:text-gray-300 transition">House</a>
+          {% comment %} <a href="#" class="hover:text-gray-300 transition">Louer</a>
+          <a href="#" class="hover:text-gray-300 transition">Agences</a> {% endcomment %}
+          <a href="#" class="hover:text-gray-300 transition">A propos</a>
           <a href="#" class="border border-white px-5 py-2 text-center hover:bg-white hover:text-black transition"> Connexion</a>
         </div>
       </div>
@@ -82,10 +82,10 @@
             <h3 class="text-white font-semibold mb-5">Navigation</h3>
             <ul class="space-y-3 text-sm">
               <li> <a href="/" class="hover:text-white transition">Accueil</a> </li>
-              <li> <a href="#" class="hover:text-white transition">Acheter un bien</a></li>
-              <li> <a href="#" class="hover:text-white transition">Louer un bien</a></li>
-              <li> <a href="#" class="hover:text-white transition">Nos agences</a></li>
-              <li> <a href="#" class="hover:text-white transition">Contact</a></li>
+              <li> <a href="{% url 'annonce-maison' %}?transaction=VENTE" class="hover:text-white transition">Acheter un bien</a></li>
+              <li> <a href="{% url 'annonce-maison' %}?transaction=LOCATION" class="hover:text-white transition">Louer un bien</a></li>
+              {% comment %} <li> <a href="#" class="hover:text-white transition">Nos agences</a></li> {% endcomment %}
+              <li> <a href="#footer" class="hover:text-white transition">Contact</a></li>
             </ul>
           </div>
 

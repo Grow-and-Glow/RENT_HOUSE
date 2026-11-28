@@ -1,12 +1,11 @@
 from django.shortcuts import render
+from .models import House, HouseStatus
 
 
 # ==================================maison=========================================
 def home(request):
-    return render(request, 'public/home.html')
-
-def ajouter_maison(request):
-    return render(request=request, template_name='public/maison/ajouter_maison.html', context={})
+    houses = House.objects.filter(status=HouseStatus.PUBLISHED).select_related("quarter")[:6]
+    return render(request, 'index.html', {'houses': houses})
 
 def supprimer_maison(request):
     return render(request=request, template_name='public/maison/supprimer_maison.html', context={})
